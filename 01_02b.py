@@ -1,6 +1,11 @@
+from collections import Counter
+
 def get_common_products(products_purchased):
     #code goes here
-    return
+    purchases = Counter(products_purchased)
+    top_three = purchases.most_common(3) # most_common(int) is a built-in function of Counter
+
+    return top_three
 
 def main():
     products_purchased = ["DES005",
